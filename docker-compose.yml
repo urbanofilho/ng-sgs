@@ -1,0 +1,14 @@
+version: '3'
+services:
+  frontend:
+    container_name: frontend-sigasi
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    environment:
+      URL_API: 'http://127.0.0.1:8001/api'
+    ports:
+      - '4204:4200'
+    volumes:
+      - '/app/node_modules'
+      - '.:/app'
