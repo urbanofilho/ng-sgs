@@ -1,0 +1,36 @@
+
+<div class="container">
+    <p-card>
+        <form [formGroup]="form">
+            <p-panel header="Sistema" class="m-2">  
+                <div class="formgrid grid">  
+                    <div class="field col-12 md:col-1">
+                        <label for="sigla">Sigla*</label>
+                        <input id="sigla" pInputText type="text" class="inputfield w-full" formControlName="sigla"> 
+                    </div>  
+                    <div class="field col-12 md:col-3">
+                        <label for="siglaexibicao">Sigla Exibição*</label>
+                        <input id="siglaexibicao" pInputText type="text" class="inputfield w-full" formControlName="siglaexibicao"> 
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="nome">Nome*</label>
+                        <input id="nome" pInputText type="text" class="inputfield w-full" formControlName="nome"> 
+                    </div>
+                    <div class="field col-12 md:col-10">
+                        <label for="descricao">Descrição*</label>
+                        <input id="descricao" pInputText type="text" class="inputfield w-full" formControlName="descricao"> 
+                    </div>
+                    <div class="field col-12 md:col-4" formGroupName="situacao">
+                        <p class="text-base">Situação*</p>
+                        <p-dropdown  formControlName="situacao" optionLabel="descricao" optionValue="situacao" placeholder="--- Selecione ---"></p-dropdown>                
+                    </div>
+                </div>
+            </p-panel>
+        </form>
+        <ng-template pTemplate="foote">
+            <button pButton type="button" label="Salvar" icon="pi pi-save"  class="m-1"></button>
+            <button pButton type="button" label="Limpar" icon="pi pi-eraser" class="m-1"></button>
+            <button pButton type="button" label="Fechar" icon="pi pi-times-circle" (click)="fechar()" class="m-1"></button>
+        </ng-template>  
+    </p-card> 
+</div>

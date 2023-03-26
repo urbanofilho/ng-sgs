@@ -1,6 +1,6 @@
 {
   "name": "sigasi-web",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0",
@@ -23,7 +23,7 @@
     "primeicons": "^6.0.1",
     "primeng": "^15.2.1",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
+    "tslib": "^2.4.1",
     "zone.js": "~0.12.0"
   },
   "devDependencies": {

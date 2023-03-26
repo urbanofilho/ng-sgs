@@ -8,21 +8,11 @@ import { environment } from 'src/environments/environment';
 })
 export class AppComponent {
   
-  title = 'Projeto SIGASI';
-  environment=environment.ENVIRONMENT
-  api_url=environment.API_URL;
-  someAPIKey= environment.API_KEYS.SOME_API_KEY;
-  someOtherAPIKey=  environment.API_KEYS.SOME_OTHER_API_KEY;
 
   /**
    *
    */
   constructor() {
-    console.log("Ambiente: ", environment.ENVIRONMENT);
-    console.log("API_URL: ", environment.API_URL);
-    console.log("SOME_API_KEY: ", environment.API_KEYS.SOME_API_KEY);
-    console.log("SOME_OTHER_API_KEY: ", environment.API_KEYS.SOME_OTHER_API_KEY);
-    
-    
+
   }
 }

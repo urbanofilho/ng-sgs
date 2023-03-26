@@ -1,0 +1,55 @@
+<div class="container">
+    <p-toolbar styleClass="p-mb-2">
+        <div class="p-toolbar-group-left">
+            <i class="pi pi-users mr-2"></i><b> Sistemas</b>
+        </div>
+    </p-toolbar> 
+    <p-card>
+        <ng-template pTemplate="foote">
+            <button pButton id="btnNovo" type="button" label="Documento" icon="pi pi-plus" (click)="novoSistemaInformacao()" [disabled]="btnNovoDisable"></button>
+        </ng-template>           
+    </p-card>
+    <p-card class="m-0">
+        <p-table
+            [value]="sistemas" dataKey="id"
+            [paginator]="true"
+            [rows]="rows"
+            [loading]="loading"
+            [first]="first"
+            [totalRecords]="totalRecords"
+            [lazy]="true"
+            (onLazyLoad)="listar($event)"    
+            [showCurrentPageReport]="true" 
+            [rowsPerPageOptions]="[10,25,50]"    
+            currentPageReportTemplate="Registros de {{first}} a {last} do total de {totalRecords}.">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Sigla</th>
+                    <th>Sigla Exibição</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Situação</th>
+                    <th style="min-width: 100px">Ações</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-sistemas>
+                <tr>
+                    <td>{{sistemas.sigla}}</td>
+                    <td>{{sistemas.siglaExibicao}}</td>
+                    <td>{{sistemas.nome}}</td>
+                    <td>{{sistemas.descricao}}</td>
+                    <td>{{sistemas.situacao}}</td>
+                    <td>
+                        <button pButton type="button" icon="pi pi-pencil" iconPos="left" class="p-button-raised p-button-rounded botoes mr-1" (click)="editar(sistemas)"></button>
+                        <button pButton type="button" icon="pi pi-trash" iconPos="left" class="p-button-raised p-button-rounded botoes" (click)="apagar(sistemas)"></button>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </p-card> 
+    <p-dialog header="Cadastrar Sistema de Informação" [(visible)]="formCadastrarSistemaInformacao" [modal]="true" [style]="{width: '80vw'}" [draggable]="false" [resizable]="false" [closable]="false">
+        <div>    
+            <app-cadastrar-sistema-informacao #cadastrarSistemaInformacao (fecharEvent)="fecharFormCadastrarSistemaInformacao()"></app-cadastrar-sistema-informacao>   
+        </div>
+    </p-dialog>
+</div>

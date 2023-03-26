@@ -1,0 +1,36 @@
+{
+    "data": 
+        {
+            "page": 1,
+            "total" : 3,
+            "itemsPerPage": 10,
+            "list": [
+                {
+                    "id" : 18,
+                    "sigla" : "SGL",
+                    "siglaExibicao": "SGL",
+                    "nome": "Sistema Geral de Licitação",
+					"descricao": "O sistema permite realizar o gerenciamento de licitações da Codevasf, tornando eficiente e visando a melhoria do processo interno",
+                    "situacao" : 2
+                }, 
+                {
+                    "id" : 16,
+                    "sigla" : "SAO",
+                    "siglaExibicao": "SAO",
+                    "nome": "Sistema de Acompanhamento de Obras",
+					"descricao": "O sistema permite a gestão da execução das obras publicas fiscalizadas pela Companhia",
+                    "situacao" : 2
+                }, 
+                {
+                    "id" : 15,
+                    "sigla" : "Publicizar",
+                    "siglaExibicao": "Publicizar",
+                    "nome": "Gestão de publicização de documentos e processos",
+					"descricao": "Gestão de publicização de documentos e processos",
+                    "situacao" : 2
+                }
+            ]
+        }
+
+    
+}

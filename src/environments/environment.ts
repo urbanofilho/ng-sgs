@@ -4,12 +4,11 @@
 
 export const environment = {
   production: false,
-  API_URL: "//qa.com.br",
-  ENVIRONMENT: 'staging',
-  API_KEYS: {
-    SOME_API_KEY: 'DEV API Key',
-    SOME_OTHER_API_KEY: 'DEV API Key 2'
-  }
+  //API: 'http://192.168.0.76:8001',
+  API: 'http://10.6.8.159:8001',
+  SIGASI_API: 'http://10.1.16.191:8003',
+  BASE_URL: '/api',
+  APP: 'sigasi'
 };
 
 /*
