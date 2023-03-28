@@ -15,9 +15,8 @@ export class ListarSistemaInformacaoComponent implements OnInit {
   @ViewChild("cadastrarSistemaInformacao") cadastrarSistemaInformacao!: CadastrarSistemaInformacaoComponent;
 
 
-  //sistemas: SistemaInformacao[] = [];
+  sistemas: SistemaInformacao[] = [];
   //sistema: SistemaInformacao;
-  sistemas: any;
   eventLocal!: LazyLoadEvent; 
   itensPorPagina: number = 10;  
   totalRecords!: number;
@@ -72,9 +71,10 @@ ngOnInit(): void {
 }     
 
 
-  editar(SistemaInformacao: SistemaInformacao){
-
-  }
+abrirFormAlterarSistemaInformacao(sistemaInformacao: any){
+  this.formCadastrarSistemaInformacao = true;
+  this.cadastrarSistemaInformacao.atualizaForm(sistemaInformacao);
+}
 
   apagar(SistemaInformacao: SistemaInformacao){
 

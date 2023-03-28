@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   //API: 'http://192.168.0.76:8001',
-  API: 'http://10.6.8.159:8001',
+  API: 'http://127.0.0.1:8003',
   SIGASI_API: 'http://10.1.16.191:8003',
   BASE_URL: '/api',
   APP: 'sigasi'

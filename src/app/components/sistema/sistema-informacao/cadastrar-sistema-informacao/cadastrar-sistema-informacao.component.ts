@@ -1,5 +1,6 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { SistemaInformacao } from 'src/app/models/sistema-informacao';
 
 @Component({
   selector: 'app-cadastrar-sistema-informacao',
@@ -8,8 +9,11 @@ import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms'
 })
 export class CadastrarSistemaInformacaoComponent implements OnInit {
 
+  @Input() sistemaInformacao!: SistemaInformacao;
+
   @Output() fecharEvent = new EventEmitter(); 
 
+  edit: boolean = false;
   form!: FormGroup;
 
   constructor(private formBuilder: FormBuilder){
@@ -17,6 +21,9 @@ export class CadastrarSistemaInformacaoComponent implements OnInit {
 
   ngOnInit(): void {
     this.prepararForm();
+    if (!!this.sistemaInformacao) {
+      this.atualizaForm(this.sistemaInformacao);          
+    } 
   }
 
   prepararForm() {
@@ -28,6 +35,10 @@ export class CadastrarSistemaInformacaoComponent implements OnInit {
           descricao: [null, [Validators.required]],
           situacao: [null, [Validators.required]]
     });
+  }
+  
+  atualizaForm(sistemaInformacao: SistemaInformacao) {
+    this.edit = true;
   }  
 
   limpar(){

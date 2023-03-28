@@ -14,12 +14,12 @@ import { HttpErrorHandler } from './http-error-handler.service';
   export class SistemaInformacaoService extends BaseService<SistemaInformacao> {
 
     constructor(protected override http: HttpClient, protected override tokenService: TokenService, protected override httpErrorHandler: HttpErrorHandler) { 
-        super(SistemaInformacao, 'sistemainformacao', http, tokenService, httpErrorHandler);
+        super(SistemaInformacao, 'sistemas-informacoes', http, tokenService, httpErrorHandler);
       }
 
       getSistemaInformacao(params?: any) {
-        //return this.http.get<SistemaInformacao>(environment.API + '/' + this.urlService + '/relacao', {headers: this.headers,
-        return this.http.get('http://127.0.0.1:8887/sigasi.json');
+        return this.http.get<any>(environment.API + '/' + this.urlService, {headers: this.headers, params: params});
+        //return this.http.get('http://127.0.0.1:8887/sigasi.json');
       } 
 
   }

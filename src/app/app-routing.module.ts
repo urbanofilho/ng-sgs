@@ -5,7 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'components/home', pathMatch: 'full' },
-  { path: 'components/home', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'sistema', loadChildren: () => import('./components/sistema/sistema.module').then(m => m.SistemaModule)},
 ];
 
