@@ -47,7 +47,7 @@
             </ng-template>
         </p-table>
     </p-card> 
-    <p-dialog header="Cadastrar Sistema de Informação" [(visible)]="formCadastrarSistemaInformacao" [modal]="true" [style]="{width: '80vw'}" [draggable]="false" [resizable]="false" [closable]="false">
+    <p-dialog header="Cadastrar Sistema de Informação" [(visible)]="formCadastrarSistemaInformacao" [modal]="true" [style]="{width: '65vw', height: '65vh' }" [draggable]="false" [resizable]="false" [closable]="false">
         <div>    
             <app-cadastrar-sistema-informacao #cadastrarSistemaInformacao (fecharEvent)="fecharFormCadastrarSistemaInformacao()"></app-cadastrar-sistema-informacao>   
         </div>

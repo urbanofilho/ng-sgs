@@ -1,13 +1,12 @@
-import { CadastrarSistemaInformacaoComponent } from './components/sistema-informacao/cadastrar-sistema-informacao/cadastrar-sistema-informacao.component';
+import { CadastrarSistemaInformacaoComponent } from './components/sistema/sistema-informacao/cadastrar-sistema-informacao/cadastrar-sistema-informacao.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { ListarSistemaInformacaoComponent } from './components/sistema-informacao/listar-sistema-informacao/listar-sistema-informacao.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'components/cadastrar-sistema-informacao', pathMatch: 'full' },
-  { path: 'components/cadastrar-sistema-informacao', component: CadastrarSistemaInformacaoComponent },
-  { path: 'components/listar-sistema-informacao', component: ListarSistemaInformacaoComponent }
+  { path: '', redirectTo: 'components/home', pathMatch: 'full' },
+  { path: 'components/home', component: HomeComponent },
+  { path: 'sistema', loadChildren: () => import('./components/sistema/sistema.module').then(m => m.SistemaModule)},
 ];
 
 @NgModule({

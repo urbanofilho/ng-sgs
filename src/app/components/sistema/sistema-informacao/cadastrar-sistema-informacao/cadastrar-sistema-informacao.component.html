@@ -1,14 +1,14 @@
 
 <div class="container">
-    <p-card>
+    <p-card> 
         <form [formGroup]="form">
             <p-panel header="Sistema" class="m-2">  
                 <div class="formgrid grid">  
-                    <div class="field col-12 md:col-1">
+                    <div class="field col-12 md:col-2">
                         <label for="sigla">Sigla*</label>
                         <input id="sigla" pInputText type="text" class="inputfield w-full" formControlName="sigla"> 
                     </div>  
-                    <div class="field col-12 md:col-3">
+                    <div class="field col-12 md:col-4">
                         <label for="siglaexibicao">Sigla Exibição*</label>
                         <input id="siglaexibicao" pInputText type="text" class="inputfield w-full" formControlName="siglaexibicao"> 
                     </div>
@@ -16,11 +16,11 @@
                         <label for="nome">Nome*</label>
                         <input id="nome" pInputText type="text" class="inputfield w-full" formControlName="nome"> 
                     </div>
-                    <div class="field col-12 md:col-10">
+                    <div class="field col-12 md:col-12">
                         <label for="descricao">Descrição*</label>
                         <input id="descricao" pInputText type="text" class="inputfield w-full" formControlName="descricao"> 
                     </div>
-                    <div class="field col-12 md:col-4" formGroupName="situacao">
+                    <div class="field col-12 md:col-12" formGroupName="situacao">
                         <p class="text-base">Situação*</p>
                         <p-dropdown  formControlName="situacao" optionLabel="descricao" optionValue="situacao" placeholder="--- Selecione ---"></p-dropdown>                
                     </div>

@@ -2,12 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Sigasi</title>
+  <title>SIGASI - Sistema de Credenciamento</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script type="text/javascript" src="https://de-sigasi-lib.codevasf.gov.br/js/jquery.js"></script>
+  <script type="text/javascript" src="https://de-sigasi-lib.codevasf.gov.br/js/bootstrap.js"></script>  
 </head>
 <body>
-  <app-root></app-root>
+  <div id="divSigasi">
+      <meta id="sigasi" service="https://de-sigasi-lib-api.codevasf.gov.br" 
+                        site="https://de-sigasi-lib.codevasf.gov.br"
+                        postLogout="https://de-intranet.codevasf.gov.br"
+                        currentApp="sigasi"
+                        authenticate="false"
+                        mode="local"
+                        target="divSigasi" />
+  </div>
+    <p></p>
+   <div id="divAplicacao">
+         <app-root></app-root>
+   </div> 
 </body>
 </html>
